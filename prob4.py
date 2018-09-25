@@ -12,6 +12,6 @@ def multiply():
 				largest_pal=max(largest_pal,num1*num2)
 	return largest_pal
 
-print(multiply())
-
+if __name__ == '__main__':
+	print(multiply())
 

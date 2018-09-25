@@ -12,4 +12,5 @@ def find_smallest():
 		res = lcm(res,i)
 	return res
 
-print(find_smallest())
+if __name__ == '__main__':
+	print(find_smallest())

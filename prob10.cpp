@@ -1,7 +1,7 @@
 /*
-The prime factors of 13195 are 5, 7, 13 and 29.
 
-What is the largest prime factor of the number 600851475143 ?
+Find the sum of all the primes below two million.
+
 */
 
 #include <iostream>
@@ -23,10 +23,10 @@ bool isPrime(long n){
 }
 
 int main(){
-	long value = 600851475143;
-	int result = 0 ;
-	for(long i = 1 ; i <= sqrt(value) ; i++)
-		if(isPrime(i) && value % i == 0)
-			result=i;
-	cout << result << endl;
+	long value = 2000000;
+    long sum = 0;
+	for(long i = 1 ; i <= value ; i++)
+		if(isPrime(i))
+			sum += i;
+	cout << sum << endl;
 }

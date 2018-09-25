@@ -1,11 +1,10 @@
 /*
-The prime factors of 13195 are 5, 7, 13 and 29.
-
-What is the largest prime factor of the number 600851475143 ?
+	What is the 10 001st prime number?
 */
 
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 using namespace std;
 
@@ -23,10 +22,16 @@ bool isPrime(long n){
 }
 
 int main(){
-	long value = 600851475143;
-	int result = 0 ;
-	for(long i = 1 ; i <= sqrt(value) ; i++)
-		if(isPrime(i) && value % i == 0)
-			result=i;
-	cout << result << endl;
+	long prime = 2;
+	int threshold = 10001;
+	while(true){
+		if(isPrime(prime))
+		{
+			threshold--;
+			if(!threshold)
+				break;
+		}
+		prime++;
+	}
+	cout<<prime<<endl;
 }
