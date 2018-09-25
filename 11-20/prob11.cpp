@@ -12,7 +12,8 @@ What is the greatest product of four adjacent numbers in the same direction
 using namespace std;
 
 long matrix_mult(const int a[20][20], int n, int w, int s, int e)
-{   long result = 1;
+{   
+    long result = 1;
     for (int i = 0; i < 4 ; i++, n += s, w += e){
         if(n >= 20 || n < 0 || w >= 20 || w < 0)
             return result;
@@ -22,7 +23,7 @@ long matrix_mult(const int a[20][20], int n, int w, int s, int e)
 }
 
 int main(){
-	int matrix[20][20] = {
+    int matrix[20][20] = {
      8,  2, 22, 97, 38, 15,  0, 40,  0, 75,  4,  5,  7, 78, 52, 12, 50, 77, 91,  8,
     49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48,  4, 56, 62,  0,
     81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30,  3, 49, 13, 36, 65,
