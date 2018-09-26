@@ -7,40 +7,46 @@ Which starting number, under one million, produces the longest chain?
 
 #include <iostream>
 #include <cmath>
-#include <vector>
+#include <unordered_map>
 
 using namespace std;
 
 
-int even(int n){
+long even(long n){
     return n/2;
 }
 
-int odd(int n){
+long odd(long n){
     return (3*n)+1;
 }
 
 int main(){
-	int start = 1;
+    long start = 1;
     int threshold = 1000000;
     int longest = 0;
     int longest_num = 0;
-    vector <int> hash (threshold,-1);
-    for(int i = 5000 ; i < threshold ; i++){
+    unordered_map < int , int > hash;
+    int counter = 1;
+    for(long i = 1 ; i <=threshold ; i++){
         start = i;
-        int counter = 0;
+        counter = 1;
         while(start!=1){
             if(start % 2 == 0)
                 start = even(start);
             else
                 start = odd(start);
-            counter++;
+            if(hash.find(start) != hash.end()){
+                counter+=hash[start];
+                break;
+            }
+            else
+                counter++;
         }
+        hash[i]=counter;
         if(longest < counter){
             longest = counter;
             longest_num = i;
         }
     }
-    cout << longest << endl;
-    cout << longest_num <<endl;
+    cout << longest_num << endl;
 }
