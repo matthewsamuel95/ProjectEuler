@@ -49,4 +49,8 @@ int main(){
         }
     }
     cout << longest_num << endl;
+<<<<<<< .merge_file_22m5Xb
 }
+=======
+}
+>>>>>>> .merge_file_gtbRKQ
