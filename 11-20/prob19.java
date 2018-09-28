@@ -13,10 +13,10 @@ public class prob19 {
     		for(int j = 0 ; j <= 11 ; j++){
     			//Calendar is abstract; cannot be instantiated
     			Calendar cal = Calendar.getInstance();
-				cal.set(Calendar.YEAR, i);
-				cal.set(Calendar.MONTH, j);
-				if(cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)
-					num_of_sundays++;
+			cal.set(Calendar.YEAR, i);
+			cal.set(Calendar.MONTH, j);
+			if(cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)
+				num_of_sundays++;
     		}
     	}
     	System.out.println(num_of_sundays);
