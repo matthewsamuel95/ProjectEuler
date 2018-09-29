@@ -4,7 +4,6 @@
 import itertools
 
 def nth_lexicographic(n,string):
-	i = 0
 	permutations = list(itertools.permutations(string, len(string)))
 	result = permutations[n-1]
 	return ''.join(str(x) for x in result)
